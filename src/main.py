@@ -208,8 +208,8 @@ class SistemaLanchonetePremium(QWidget):
                 print(f"ERRO [Main]: Imagem de fundo NÃO encontrada em: {image_path}")
                 # Estilo básico sem imagem
                 bg_style = """
-                    QWidget#mainWindow { background-color: #e9ecef; }
-                    QFrame#loginFrame { background-color: white; border-radius: 10px; }
+                    QWidget#mainWindow { background-color: blue; }
+                    QFrame#loginFrame { background-color: blue; border-radius: 10px; }
                     /* ... outros estilos básicos ... */
                 """
             self.setStyleSheet(bg_style)
