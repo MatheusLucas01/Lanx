@@ -1,0 +1,14 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignore everything except the venv folder
+!/
+!/venv
+*.log
+*.tmp
+*.bak
+/venv
+dist
+# Ignore products.json if it is generated during runtime or build processes
+products.json
+# vendas.json is tracked and should not be ignored
+!vendas.json
+vendas.json
