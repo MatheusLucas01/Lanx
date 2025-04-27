@@ -1,4 +1,4 @@
-🌟 Lanx - Sistema PDV para Lanchonete Familiar
+🌟 #Lanx - Sistema PDV para Lanchonete Familiar
 Lanx é um sistema de ponto de venda (PDV) desenvolvido em Python para gerenciar as vendas, produtos e relatórios de uma lanchonete familiar. Com duas interfaces distintas, o sistema é ideal para otimizar as operações diárias da lanchonete, proporcionando um atendimento mais ágil e um controle eficiente de vendas.
 
 💡 Funcionalidades
