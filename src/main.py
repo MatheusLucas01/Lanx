@@ -11,28 +11,44 @@ from PyQt6.QtCore import Qt, QDateTime, QDate, QTime
 from PyQt6.QtGui import QFont, QIcon, QPixmap
 
 # Importar configurações
-from config import PRODUCTS_FILE, SALES_FILE, LOGIN_BACKGROUND_IMAGE
+# from config import PRODUCTS_FILE, SALES_FILE, LOGIN_BACKGROUND_IMAGE
 
-# Importar componentes da UI do pacote 'ui'
+# Importar componentes da UI do pacote 'ui' - Use este padrão para TODOS:
 from ui.dashboard import Dashboard
 from ui.cadastro_tab import CadastroTab
 from ui.estoque_tab import EstoqueTab
-from ui.vendas_gerente_tab import VendasTab # Nome do arquivo alterado
+from ui.vendas_gerente_tab import VendasTab
 from ui.fiscal_tab import FiscalTab
 from ui.configuracoes_tab import ConfiguracoesTab
 from ui.financeiro_tab import FinanceiroTab
 from ui.pos_interface import POSInterface
 # PaymentDialog é importado por POSInterface
+# Importar os caminhos RELATIVOS de config
+from config import PRODUCTS_FILE_REL, SALES_FILE_REL, LOGIN_BACKGROUND_IMAGE_REL
+
+# A função resource_path está correta aqui
+def resource_path(relative_path):
+    """ Retorna o caminho absoluto para o recurso, funciona para dev e para PyInstaller """
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        # Modo Dev: Calcula a raiz do projeto a partir de main.py em src/
+        base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    return os.path.join(base_path, relative_path)
+
+
+
 
 class SistemaLanchonetePremium(QWidget):
         # Usa os caminhos importados de config.py
-        PRODUCTS_FILE = PRODUCTS_FILE
-        SALES_FILE = SALES_FILE
-        LOGIN_BACKGROUND_IMAGE = LOGIN_BACKGROUND_IMAGE
+        PRODUCTS_FILE = resource_path(PRODUCTS_FILE_REL)
+        SALES_FILE = resource_path(SALES_FILE_REL)
+        LOGIN_BACKGROUND_IMAGE = resource_path(LOGIN_BACKGROUND_IMAGE_REL)
 
         def __init__(self):
             super().__init__()
-            self.setObjectName("mainWindow") # ID para estilização (background)
+            self.setObjectName("mainWindow")
+        # Os prints agora mostrarão o caminho absoluto correto em dev e no bundle
             print(f"DEBUG [Main]: Procurando products em: {self.PRODUCTS_FILE}")
             print(f"DEBUG [Main]: Procurando vendas em: {self.SALES_FILE}")
             print(f"DEBUG [Main]: Procurando imagem login em: {self.LOGIN_BACKGROUND_IMAGE}")
@@ -208,7 +224,7 @@ class SistemaLanchonetePremium(QWidget):
                 print(f"ERRO [Main]: Imagem de fundo NÃO encontrada em: {image_path}")
                 # Estilo básico sem imagem
                 bg_style = """
-                    QWidget#mainWindow { background-color: blue; }
+                    QWidget#mainWindow { background-color: white; }
                     QFrame#loginFrame { background-color: blue; border-radius: 10px; }
                     /* ... outros estilos básicos ... */
                 """
