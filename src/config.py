@@ -14,8 +14,6 @@ SALES_FILE = os.path.join(BASE_DIR, "vendas.json")
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), "assets")
 LOGIN_BACKGROUND_IMAGE = os.path.join(ASSETS_DIR, "image.jpg")
 
-# Você pode adicionar outras configurações aqui, como credenciais de API (com cuidado!)
-# ou configurações padrão do sistema.
 
 # Debug para verificar os caminhos (opcional)
 # print(f"DEBUG [config.py]: BASE_DIR = {BASE_DIR}")

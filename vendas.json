@@ -10,5 +10,27 @@
         ],
         "total": 9.0,
         "metodo_pagamento": "Dinheiro"
+    },
+    {
+        "data": "2025-04-27T15:29:17",
+        "itens": [
+            {
+                "produto": "Batata Frita Média",
+                "quantidade": 1,
+                "preco": 9.0
+            },
+            {
+                "produto": "Coca-Cola Lata",
+                "quantidade": 1,
+                "preco": 5.0
+            },
+            {
+                "produto": "Hamburguer Clássico",
+                "quantidade": 1,
+                "preco": 18.5
+            }
+        ],
+        "total": 32.5,
+        "metodo_pagamento": "Dinheiro"
     }
 ]

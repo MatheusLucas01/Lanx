@@ -5,7 +5,7 @@
         "description": "Pão, carne, queijo",
         "price": 18.5,
         "category": "Lanche",
-        "stock": 49
+        "stock": 48
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "350ml",
         "price": 5.0,
         "category": "Bebida",
-        "stock": 98
+        "stock": 97
     },
     {
         "id": 3,
@@ -21,6 +21,6 @@
         "description": "Porção",
         "price": 9.0,
         "category": "Lanche",
-        "stock": 78
+        "stock": 77
     }
 ]
