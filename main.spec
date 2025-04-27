@@ -42,7 +42,9 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None )
+          entitlements_file=None,
+          icon='src/assets/iconLanx.ico'
+           )
 # A seção COLLECT também deve estar OK
 coll = COLLECT(exe,
                a.binaries,
