@@ -1,3 +1,3 @@
 Para Gerar o executavel basta (na raiz LANX/, com venv ativo):
 (Opcional, mas recomendado) Deletar build/ e dist/.
-Executar pyinstaller main.spec.
+Executar pyinstaller main.spec
