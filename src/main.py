@@ -198,7 +198,7 @@ class SistemaLanchonetePremium(QWidget):
                         padding: 10px;
                         border: 1px solid #ced4da;
                         border-radius: 5px;
-                        font-size: 11pt;
+                        font-size: 15pt;
                         background-color: white; /* Garante fundo branco */
                     }}
                     QPushButton#primaryButton {{
@@ -225,7 +225,7 @@ class SistemaLanchonetePremium(QWidget):
                 # Estilo básico sem imagem
                 bg_style = """
                     QWidget#mainWindow { background-color: white; }
-                    QFrame#loginFrame { background-color: blue; border-radius: 10px; }
+                    QFrame#loginFrame { background-color: rgba(255, 255, 255, 0.92); border-radius: 10px; }
                     /* ... outros estilos básicos ... */
                 """
             self.setStyleSheet(bg_style)
@@ -241,7 +241,7 @@ class SistemaLanchonetePremium(QWidget):
             frame_layout = QVBoxLayout(login_frame)
             frame_layout.setContentsMargins(40, 40, 40, 40); frame_layout.setSpacing(20)
 
-            self.titulo_label = QLabel("MR Lanches")
+            self.titulo_label = QLabel("SaborPro 🧑‍🍳")
             self.titulo_label.setObjectName("loginTitleLabel") # Aplica o ID do estilo
             self.titulo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
             frame_layout.addWidget(self.titulo_label)
